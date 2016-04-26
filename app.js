@@ -34,6 +34,12 @@ app.engine("html", swig.renderFile);
 app.set("view engine", "html");
 app.set("views", __dirname + '/views');
 
+router.get( '/users/:name', function (req, res) {
+	var name = req.params.name.split("_").join(" ");
+	var list = tweetBank.find({name: name});
+	res.render( 'index', {title: 'Twitter.js - Posts by ' + name, list: list});
+});
+
 
 // app.use(morgan("dev"));
 

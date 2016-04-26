@@ -8,14 +8,19 @@
   <div class="row">
     <div class="col-md-3">
       <img src="https://pbs.twimg.com/profile_images/2450268678/olxp11gnt09no2y2wpsh_normal.jpeg"><br>
-      <b>Your Name</b><br>
+      <b>John and Michael</b><br>
       100 followers
     </div>
     <div class="col-md-9">
     
       <!-- display tweets here -->
       {% for tweet in tweets %}
-        <li>{{tweet.text}}</li>
+        <div class=nimit>
+        <img src="https://pbs.twimg.com/profile_images/2450268678/olxp11gnt09no2y2wpsh_normal.jpeg">
+        </div>
+        <li class=names>{{tweet.name}}</li>
+        <li class=tweets>{{tweet.text}}</li>
+        <br />
       {% endfor %}
       
     </div>
