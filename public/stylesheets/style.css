@@ -57,12 +57,3 @@ code {
 .content .by {
   font-weight: bold;
 }
-.names {
-  font-weight: bold;
-}
-.names, .tweets {
-  list-style: none;
-}
-.nimit{
-  float: left;
-}

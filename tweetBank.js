@@ -1,9 +1,11 @@
-var _ = require('lodash');
+'use strict';
 
+var _ = require('lodash');
 var data = [];
 
 function add (name, text) {
-  data.push({ name: name, text: text });
+  data.push({ name: name, text: text, id: data.length });
+  return _.clone(data[data.length - 1]);
 }
 
 function list () {
